@@ -1,101 +1,117 @@
+'use client'
+
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { RxDotFilled } from "react-icons/rx";
+import { RxDot } from "react-icons/rx";
+import winery1 from '../../public/M.S.Torun Winery.jpeg'
+import winery2 from '../../public/M.S.Torun Winery overhead view.jpeg'
+import sidsib from '../../public/Sid Torun and Siyabend Kaya.jpeg'
+import asia1 from '../../public/Asia 1.jpeg'
+import asia2 from '../../public/Asia2.jpeg'
+import asia3 from '../../public/Asia3.jpeg'
+import eur1 from '../../public/Europe 1.jpeg'
+import eur2 from '../../public/Europe 2.jpeg'
+import nam1 from '../../public/North America 1.jpeg'
+import nam2 from '../../public/North America 2.jpeg'
+import nam3 from '../../public/North America 3.jpeg'
+import aus1 from '../../public/Australia 1.jpeg'
+import aus2 from '../../public/Australia 2.jpeg'
+import aus3 from '../../public/Australia 3.jpeg'
+import sam1 from '../../public/South America 1.jpeg'
+import sam2 from '../../public/South America 2.jpeg'
+import sam3 from '../../public/South America 3.jpeg'
+import afr1 from '../../public/Africa 1.jpeg'
+import afr2 from '../../public/Africa 2.jpeg'
+import afr3 from '../../public/Africa 3.jpeg'
+import ant1 from '../../public/Antarctica 1.jpeg'
+import ant2 from '../../public/Antarctica 2.jpeg'
+import ant3 from '../../public/Antarctica 3.jpeg'
+import wineryPre from '../../public/The winery before.jpeg'
+import sibwindow from '../../public/Siyabend framför omålad fönsterlucka.jpeg'
+import window from '../../public/omålade fönsterluckorna inifrån.jpeg'
+import wip1 from '../../public/work in progress 1.jpeg'
+import wip2 from '../../public/work in progress 2.jpeg'
+import wip3 from '../../public/work in progress 3.jpeg'
+import wip4 from '../../public/work in progress 4.jpeg'
+import wip5 from '../../public/work in progress 5.jpeg'
+import wip6 from '../../public/work in progress 6.jpeg'
+import wip7 from '../../public/work in progress 7.jpeg'
+import wip8 from '../../public/work in progress 8.jpeg'
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function Home() {
+    const slides = [
+        winery1,
+        winery2,
+        sidsib,
+        asia1,
+        asia2,
+        asia3,
+        eur1,
+        eur2,
+        nam1,
+        nam2,
+        nam3,
+        aus1,
+        aus2,
+        aus3,
+        sam1,
+        sam2,
+        sam3,
+        afr1,
+        afr2,
+        afr3,
+        ant1,
+        ant2,
+        ant3,
+        wineryPre,
+        sibwindow,
+        window,
+        wip1,
+        wip2,
+        wip3,
+        wip4,
+        wip5,
+        wip6,
+        wip7,
+        wip8
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex -1;
+        setCurrentIndex(newIndex);
+    }
+    const nextSlide = () => {
+        const isLastSlide = currentIndex === slides.length -1;
+        const newIndex = isLastSlide ? 0 : currentIndex +1;
+        setCurrentIndex(newIndex)
+    }
+
+    const goToSlide = (slideIndex: number) => {
+        setCurrentIndex(slideIndex)
+    }
+
+    return (
+        <main className="max-w-[1400px] max-h-[600px] w-full m-auto py-4 px-4 relative flex flex-col items-center">
+            <img className="HÖG w-[90%] md:max-w-[400px] rounded-lg" src={`${slides[currentIndex].src}`} />
+            <div onClick={prevSlide}  className="absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer">
+                <ChevronLeft size={30} />
+            </div>
+            <div onClick={nextSlide} className="absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer">
+                <ChevronRight size={30} />
+            </div>
+            {/* <div className="flex top-4 justify-center py-2 text-sm -m-1">
+                {slides.map((slide, index) => (
+                    <div key={index} onClick={() => goToSlide(index)} className="cursor-pointer">
+                        {currentIndex === index ? <RxDotFilled /> : <RxDot />}
+                    </div>
+                ))}
+            </div> */}
+        </main>
+    );
 }
