@@ -32,14 +32,14 @@ import ant3 from '../../public/Antarctica 3.jpeg'
 import wineryPre from '../../public/The winery before.jpeg'
 import sibwindow from '../../public/Siyabend framför omålad fönsterlucka.jpeg'
 import window from '../../public/omålade fönsterluckorna inifrån.jpeg'
-import wip1 from '../../public/work in progress 1.jpeg'
-import wip2 from '../../public/work in progress 2.jpeg'
-import wip3 from '../../public/work in progress 3.jpeg'
-import wip4 from '../../public/work in progress 4.jpeg'
-import wip5 from '../../public/work in progress 5.jpeg'
-import wip6 from '../../public/work in progress 6.jpeg'
-import wip7 from '../../public/work in progress 7.jpeg'
-import wip8 from '../../public/work in progress 8.jpeg'
+// import wip1 from '../../public/work in progress 1.jpeg'
+// import wip2 from '../../public/work in progress 2.jpeg'
+// import wip3 from '../../public/work in progress 3.jpeg'
+// import wip4 from '../../public/work in progress 4.jpeg'
+// import wip5 from '../../public/work in progress 5.jpeg'
+// import wip6 from '../../public/work in progress 6.jpeg'
+// import wip7 from '../../public/work in progress 7.jpeg'
+// import wip8 from '../../public/work in progress 8.jpeg'
 
 export default function Home() {
     const slides = [
@@ -69,14 +69,14 @@ export default function Home() {
         wineryPre,
         sibwindow,
         window,
-        wip1,
-        wip2,
-        wip3,
-        wip4,
-        wip5,
-        wip6,
-        wip7,
-        wip8
+        // wip1,
+        // wip2,
+        // wip3,
+        // wip4,
+        // wip5,
+        // wip6,
+        // wip7,
+        // wip8
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0)
